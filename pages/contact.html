@@ -1,0 +1,109 @@
+
+
+<script>
+(function(){
+  // NAV SCROLL
+  const nav = document.getElementById('mainNav');
+  if(nav) window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>40));
+
+  // DRAWER
+  const hamburger   = document.getElementById('hamburger');
+  const drawer      = document.getElementById('mobileDrawer');
+  const drawerClose = document.getElementById('drawerClose');
+  const overlay     = document.getElementById('drawerOverlay');
+  function openDrawer(){ if(!drawer) return; drawer.classList.add('open'); if(hamburger) hamburger.classList.add('open'); document.body.style.overflow='hidden'; }
+  function closeDrawer(){ if(!drawer) return; drawer.classList.remove('open'); if(hamburger) hamburger.classList.remove('open'); document.body.style.overflow=''; }
+  if(hamburger)   hamburger.addEventListener('click', openDrawer);
+  if(drawerClose) drawerClose.addEventListener('click', closeDrawer);
+  if(overlay)     overlay.addEventListener('click', closeDrawer);
+  document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeDrawer(); });
+  if(drawer) drawer.querySelectorAll('.drawer-nav a').forEach(a=>a.addEventListener('click',closeDrawer));
+
+  // SCROLL REVEAL
+  const revealIO = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); revealIO.unobserve(e.target); } });
+  },{threshold:.08, rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>revealIO.observe(el));
+
+  // PRODUCT SELECTOR
+  const trigger    = document.getElementById('psTrigger');
+  const panel      = document.getElementById('psPanel');
+  const trigText   = document.getElementById('psTriggerText');
+  const hiddenProd = document.getElementById('fproduct');
+  const qtySection = document.getElementById('qtySection');
+  const qtyOptions = document.getElementById('qtyOptions');
+  const qtyCustom  = document.getElementById('qtyCustom');
+  const hiddenQty  = document.getElementById('fquantity');
+
+  const QTY_CONFIG = {
+    chocolate:{ chips:['10 pieces','20 pieces','30 pieces'], custom:{label:'We need even more!',placeholder:'Enter quantity (e.g. 50 pieces)...'} },
+    syrup:    { chips:['500 ml','1 litre','2 litres'],        custom:null },
+    sauce:    { chips:['50 g','100 g','200 g'],               custom:null },
+    pickle:   { chips:['50 g','100 g','250 g'],               custom:null },
+    mithai:   { chips:['10 pieces','20 pieces','30 pieces'],  custom:{label:'Need a bigger box?',placeholder:'Enter quantity (e.g. 50 pieces)...'} },
+    custom:   { chips:[], custom:{label:'Tell us what you need',placeholder:'Describe your order...'} }
+  };
+
+  function openPanel(){ if(!panel) return; panel.classList.add('open'); trigger.classList.add('open'); trigger.setAttribute('aria-expanded','true'); }
+  function closePanel(){ if(!panel) return; panel.classList.remove('open'); trigger.classList.remove('open'); trigger.setAttribute('aria-expanded','false'); }
+  if(trigger){ trigger.addEventListener('click',e=>{ e.stopPropagation(); panel.classList.contains('open')?closePanel():openPanel(); }); }
+  document.addEventListener('click',e=>{ if(panel && !e.target.closest('#productSelector')) closePanel(); });
+
+  function buildQty(category){
+    const cfg=QTY_CONFIG[category];
+    if(!cfg||!qtySection){ if(qtySection) qtySection.style.display='none'; return; }
+    qtyOptions.innerHTML=''; qtyCustom.style.display='none'; qtyCustom.value=''; hiddenQty.value='';
+    if(cfg.chips.length===0&&cfg.custom){
+      qtySection.style.display='block';
+      qtyCustom.placeholder=cfg.custom.placeholder; qtyCustom.style.display='block';
+      qtyCustom.addEventListener('input',()=>hiddenQty.value=qtyCustom.value); return;
+    }
+    qtySection.style.display='block';
+    cfg.chips.forEach(label=>{
+      const chip=document.createElement('button'); chip.type='button'; chip.className='qty-chip'; chip.textContent=label;
+      chip.addEventListener('click',()=>{ qtyOptions.querySelectorAll('.qty-chip').forEach(c=>c.classList.remove('active')); chip.classList.add('active'); hiddenQty.value=label; qtyCustom.style.display='none'; qtyCustom.value=''; });
+      qtyOptions.appendChild(chip);
+    });
+    if(cfg.custom){
+      const more=document.createElement('button'); more.type='button'; more.className='qty-chip'; more.textContent=cfg.custom.label;
+      more.addEventListener('click',()=>{ qtyOptions.querySelectorAll('.qty-chip').forEach(c=>c.classList.remove('active')); more.classList.add('active'); qtyCustom.placeholder=cfg.custom.placeholder; qtyCustom.style.display='block'; qtyCustom.focus(); hiddenQty.value=''; });
+      qtyCustom.addEventListener('input',()=>hiddenQty.value=qtyCustom.value);
+      qtyOptions.appendChild(more);
+    }
+  }
+
+  document.querySelectorAll('.ps-option').forEach(opt=>{
+    opt.addEventListener('click',()=>{
+      document.querySelectorAll('.ps-option').forEach(o=>o.classList.remove('selected'));
+      opt.classList.add('selected');
+      if(trigText){ trigText.textContent=opt.dataset.value; trigText.classList.add('selected'); }
+      if(hiddenProd) hiddenProd.value=opt.dataset.value;
+      closePanel();
+      buildQty(opt.dataset.category);
+    });
+  });
+
+  // ORDER FORM
+  const orderForm=document.getElementById('orderForm');
+  if(orderForm){
+    orderForm.addEventListener('submit',e=>{
+      e.preventDefault();
+      const name=document.getElementById('fname').value.trim();
+      const phone=document.getElementById('fphone').value.trim();
+      const product=hiddenProd?hiddenProd.value:'';
+      const qty=hiddenQty?hiddenQty.value:'';
+      const message=document.getElementById('fmessage').value.trim();
+      if(!name||!phone||!product){ alert('Please fill in your name, phone and product selection.'); return; }
+      const qtyLine=qty?('\nQuantity: '+qty):'';
+      const msgLine=message?('\nNote: '+message):'';
+      const text='Hi Anubhav Flavours!\n\nName: '+name+'\nPhone: '+phone+'\nOrder: '+product+qtyLine+msgLine+'\n\nLooking forward to ordering!';
+      const waUrl='https://wa.me/919999999999?text='+encodeURIComponent(text);
+      document.getElementById('formFields').style.display='none';
+      document.getElementById('formSuccess').style.display='block';
+      setTimeout(()=>window.open(waUrl,'_blank'),800);
+    });
+  }
+})();
+</script>
+</body>
+</html>

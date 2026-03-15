@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Products — Anubhav Flavours</title>
+  <meta name="description" content="Explore our full range of handcrafted homemade products — artisanal chocolates, flavoured syrups, Schezwan sauce, traditional Sindhi pickles and sugar-free mithai.">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" type="image/png" href="../images/logo-dark.png">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="mainNav">
+    <a href="/" class="nav-logo"><img src="../images/logo-dark.png" alt="" class="nav-logo-img"><span class="nav-logo-text">Anubhav Flavours</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/pages/products">Products</a></li>
+      <li><a href="/pages/about">Our Story</a></li>
+      <li><a href="/pages/contact" class="nav-cta">Order Now</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+
+<!-- ── FULL-SCREEN MOBILE DRAWER ── -->
+<div class="mobile-drawer" id="mobileDrawer">
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <div class="drawer-panel">
+    <span class="drawer-brand-name">Anubhav Flavours</span>
+    <button class="drawer-close" id="drawerClose" aria-label="Close menu">✕</button>
+    <nav class="drawer-nav">
+    <a href="/">Home</a>
+    <a href="/pages/products" class="active-page">Products</a>
+    <a href="/pages/about">Our Story</a>
+    <a href="/pages/contact">Order Now</a>
+    </nav>
+    <div class="drawer-divider"></div>
+    <a href="https://wa.me/919999999999" class="drawer-wa-btn" target="_blank">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      WhatsApp Us
+    </a>
+  </div>
+</div>
+
+<!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="container page-hero-content">
+      <p class="page-hero-eyebrow">Our Collection</p>
+      <h1>Every Flavour,<br><em>A Feeling</em></h1>
+      <p>Five categories. Endless moments. All made with the same love and care of a home kitchen.</p>
+    </div>
+  </div>
+
+  <!-- PRODUCTS PAGE CONTENT -->
+  <section class="products-page">
+    <div class="container">
+
+      <!-- FILTER -->
+      <div class="product-filter">
+        <button class="filter-btn active" data-category="all">All Products</button>
+        <button class="filter-btn" data-category="chocolate">Chocolates</button>
+        <button class="filter-btn" data-category="syrup">Syrups</button>
+        <button class="filter-btn" data-category="sauce">Sauce</button>
+        <button class="filter-btn" data-category="pickle">Pickle</button>
+        <button class="filter-btn" data-category="mithai">Mithai</button>
+      </div>
+
+      <!-- CHOCOLATES HEADER -->
+      <div style="margin-bottom:1.5rem;" class="reveal">
+        <p class="section-eyebrow" style="justify-content:flex-start;">Category 01</p>
+        <h2 class="section-title" style="font-size:2rem;">Artisanal <em>Chocolates</em></h2>
+        <p class="section-sub" style="font-size:0.95rem;">Handcrafted with premium ingredients and indulgent flavour combinations.</p>
+      </div>
+
+      <div class="products-full-grid" style="margin-bottom:4rem;">
+        <div class="product-card reveal" data-category="chocolate">
+          <div class="product-card-img" style="background:linear-gradient(135deg,#2C1810,#4A2010);">
+            <span class="product-emoji">🍫</span>
+            <span class="product-tag">Bestseller</span>
+          </div>
+          <div class="product-card-body">
+            <p class="product-category">Artisanal Chocolate</p>
+            <h3 class="product-name">Fruit &amp; Nut Chocolate</h3>
+            <p class="product-desc">A classic combination of premium chocolate with a generous mix of dried fruits and crunchy nuts. Every bite is a textural delight.</p>
+            <div class="product-variants">
+              <span class="variant-chip">Dark Base</span>
+              <span class="variant-chip">Raisins</span>
+              <span class="variant-chip">Mixed Nuts</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card reveal reveal-delay-1" data-category="chocolate">
+          <div class="product-card-img" style="background:linear-gradient(135deg,#3A1A0A,#5C2A10);">
+            <span class="product-emoji">🍊</span>
+          </div>
+          <div class="product-card-body">
+            <p class="product-category">Artisanal Chocolate</p>
+            <h3 class="product-name">Orange Chocolate</h3>
+            <p class="product-desc">Zesty orange essence meets rich chocolate in a bold, refreshing pairing. Bright, citrusy and deeply satisfying.</p>
+            <div class="product-variants">
+              <span class="variant-chip">Citrus Zest</span>
+              <span class="variant-chip">Dark Chocolate</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card reveal reveal-delay-2" data-category="chocolate">
+          <div class="product-card-img" style="background:linear-gradient(135deg,#1A1008,#3A2010);">
+            <span class="product-emoji">☕</span>
+          </div>
+          <div class="product-card-body">
+            <p class="product-category">Artisanal Chocolate</p>
+            <h3 class="product-name">Coffee Chocolate</h3>
+            <p class="product-desc">For the coffee lover — a bold espresso-infused chocolate that delivers a smooth, roasted depth with every bite.</p>
+            <div class="product-variants">
+              <span class="variant-chip">Espresso Blend</span>
+              <span class="variant-chip">Creamy</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card reveal" data-category="chocolate">
+          <div class="product-card-img" style="background:linear-gradient(135deg,#2A1808,#4A2800);">
+            <span class="product-emoji">🌰</span>
+          </div>
+          <div class="product-card-body">
+            <p class="product-category">Artisanal Chocolate</p>
+            <h3 class="product-name">Roasted Almond Chocolate</h3>
+            <p class="product-desc">Whole roasted almonds enrobed in smooth, rich chocolate. The satisfying crunch makes this an instant favourite.</p>
+            <div class="product-variants">
+              <span class="variant-chip">Whole Almonds</span>
+              <span class="variant-chip">Roasted</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SYRUPS HEADER -->
+      <div style="margin-bottom:1.5rem;" class="reveal">
+        <p class="section-eyebrow" style="justify-content:flex-start;">Category 02</p>
+        <h2 class="section-title" style="font-size:2rem;">Flavoured <em>Syrups</em></h2>
+        <p class="section-sub" style="font-size:0.95rem;">Vibrant fruit syrups — just add soda, water or sparkling water for an instant refreshing drink.</p>
+      </div>
+
+      <div class="products-full-grid" style="margin-bottom:4rem;">
+        <div class="product-card reveal" data-category="syrup">
+          <div class="product-card-img" style="background:linear-gradient(135deg,#1A3A1A,#2A5A1A);">
+            <span class="product-emoji">🍋</span>
+            <span class="product-tag">New</span>
+          </div>
+          <div class="product-card-body">
+            <p class="product-category">Flavoured Syrup</p>
+            <h3 class="product-name">Kalla Khatta Syrup</h3>
+            <p class="product-desc">The beloved tangy-sweet flavour of Indian street food, now bottled. Mix with soda for an instant nostalgia hit.</p>
+            <div class="product-variants">
+              <span class="variant-chip">Tangy</span>
+              <span class="variant-chip">Street-Style</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card reveal reveal-delay-1" data-category="syrup">
+          <div class="product-card-img" style="background:linear-gradient(135deg,#2A1A3A,#3A2A5A);">
+            <span class="product-emoji">🍇</span>
+          </div>
+          <div class="product-card-body">
+            <p class="product-category">Flavoured Syrup</p>
+            <h3 class="product-name">Mixed Fruit Syrup</h3>
+            <p class="product-desc">A vibrant blend of multiple fruits creating a balanced, sweet and refreshing syrup perfect for any occasion.</p>
+            <div class="product-variants">
+              <span class="variant-chip">Multi-Fruit</span>
+              <span class="variant-chip">Refreshing</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card reveal reveal-delay-2" data-category="syrup">
+          <div class="product-card-img" style="background:linear-gradient(135deg,#3A1A1A,#5A2A2A);">
+            <span class="product-emoji">🍑</span>
+          </div>
+          <div class="product-card-body">
+            <p class="product-category">Flavoured Syrup</p>
+            <h3 class="product-name">Litchi Syrup</h3>
+            <p class="product-desc">Delicate, floral litchi flavour captured in a sweet syrup. Pairs beautifully with sparkling water or mocktails.</p>
+            <div class="product-variants">
+              <span class="variant-chip">Floral</span>
+              <span class="variant-chip">Sweet</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SAUCE HEADER -->
+      <div style="margin-bottom:1.5rem;" class="reveal">
+        <p class="section-eyebrow" style="justify-content:flex-start;">Category 03</p>
+        <h2 class="section-title" style="font-size:2rem;">Signature <em>Sauce</em></h2>
+      </div>
+
+      <div class="products-full-grid" style="margin-bottom:4rem;">
+        <div class="product-card reveal" data-category="sauce" style="grid-column:span 1;">
+          <div class="product-card-img" style="background:linear-gradient(135deg,#3A0808,#6A1010);">
+            <span class="product-emoji">🌶️</span>
+            <span class="product-tag">Signature</span>
+          </div>
+          <div class="product-card-body">
+            <p class="product-category">Signature Sauce</p>
+            <h3 class="product-name">Schezwan Sauce</h3>
+            <p class="product-desc">Crafted from Kashmiri and Guntur chillies, blended with garlic, ginger, and aromatic spices. A bold sauce that elevates everything it touches — momos, noodles, fried rice, sandwiches and more.</p>
+            <div class="product-variants">
+              <span class="variant-chip">Kashmiri Chillies</span>
+              <span class="variant-chip">Guntur Chillies</span>
+              <span class="variant-chip">Garlic</span>
+              <span class="variant-chip">Ginger</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PICKLE HEADER -->
+      <div style="margin-bottom:1.5rem;" class="reveal">
+        <p class="section-eyebrow" style="justify-content:flex-start;">Category 04</p>
+        <h2 class="section-title" style="font-size:2rem;">Traditional <em>Pickle</em></h2>
+      </div>
+
+      <div class="products-full-grid" style="margin-bottom:4rem;">
+        <div class="product-card reveal" data-category="pickle">
+          <div class="product-card-img" style="background:linear-gradient(135deg,#2A1A00,#4A3000);">
+            <span class="product-emoji">🥭</span>
+            <span class="product-tag">Heritage Recipe</span>
+          </div>
+          <div class="product-card-body">
+            <p class="product-category">Traditional Sindhi Pickle</p>
+            <h3 class="product-name">Mitthi Ambdi</h3>
+            <p class="product-desc">A traditional Sindhi delicacy — sweet mango pickle made using authentic homemade methods. Sweetness, spices and tangy mango combined in a recipe rooted in nostalgic Sindhi cooking.</p>
+            <div class="product-variants">
+              <span class="variant-chip">Sweet Mango</span>
+              <span class="variant-chip">Sindhi Heritage</span>
+              <span class="variant-chip">Homemade Method</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MITHAI HEADER -->
+      <div style="margin-bottom:1.5rem;" class="reveal">
+        <p class="section-eyebrow" style="justify-content:flex-start;">Category 05</p>
+        <h2 class="section-title" style="font-size:2rem;">Healthy <em>Sweets</em></h2>
+      </div>
+
+      <div class="products-full-grid" style="margin-bottom:4rem;">
+        <div class="product-card reveal" data-category="mithai">
+          <div class="product-card-img" style="background:linear-gradient(135deg,#1A2A10,#2A4A1A);">
+            <span class="product-emoji">🌟</span>
+            <span class="product-tag">Sugar-Free</span>
+          </div>
+          <div class="product-card-body">
+            <p class="product-category">Sugar-Free Sweets</p>
+            <h3 class="product-name">Dry Fruit Mithai</h3>
+            <p class="product-desc">Premium dry fruits, naturally sweet, with no added sugar. Perfect for festive gifting, health-conscious sweet lovers and everyday guilt-free indulgence.</p>
+            <div class="product-variants">
+              <span class="variant-chip">No Added Sugar</span>
+              <span class="variant-chip">Premium Dry Fruits</span>
+              <span class="variant-chip">Festive Gift</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ORDER CTA -->
+      <div class="reveal" style="text-align:center;padding:3rem;background:var(--parchment);border:1px solid var(--border-warm);border-radius:4px;">
+        <p style="font-family:var(--font-display);font-size:2rem;color:var(--text-dark);margin-bottom:0.5rem;">Ready to order?</p>
+        <p style="font-family:var(--font-ui);font-size:0.95rem;color:var(--text-muted);margin-bottom:1.75rem;">Place your order directly via WhatsApp or send us an enquiry.</p>
+        <div class="cta-actions" style="justify-content:center;">
+          <a href="https://wa.me/919999999999?text=Hi%20Anubhav%20Flavours!%20I%20would%20like%20to%20place%20an%20order." class="whatsapp-btn" target="_blank" style="color:white;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            Order on WhatsApp
+          </a>
+          <a href="/pages/contact" class="btn-primary">Send Enquiry</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-logo">
+            <span class="footer-brand-name">Anubhav Flavours</span>
+          </div>
+          <p class="footer-tagline">Made with Love, Served with Experience.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link">in</a>
+            <a href="#" class="social-link">ig</a>
+            <a href="#" class="social-link">fb</a>
+          </div>
+        </div>
+        <div>
+          <p class="footer-col-title">Navigate</p>
+          <ul class="footer-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/pages/products">Products</a></li>
+            <li><a href="/pages/about">Our Story</a></li>
+            <li><a href="/pages/contact">Order Now</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col-title">Products</p>
+          <ul class="footer-links">
+            <li><a href="/pages/products">Chocolates</a></li>
+            <li><a href="/pages/products">Syrups</a></li>
+            <li><a href="/pages/products">Schezwan Sauce</a></li>
+            <li><a href="/pages/products">Sindhi Pickle</a></li>
+            <li><a href="/pages/products">Dry Fruit Mithai</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col-title">Contact</p>
+          <ul class="footer-links">
+            <li><a href="https://wa.me/919999999999">WhatsApp Us</a></li>
+            <li><a href="/pages/contact">Place an Order</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2025 Anubhav Flavours. Crafted with love in India. 🇮🇳</p>
+        <p class="footer-copy">Made with <span style="color:var(--gold)">♥</span> for homemade food lovers</p>
+      </div>
+    </div>
+  </footer>
+
+<script>
+(function(){
+  // ── NAV SCROLL ──
+  const nav = document.getElementById('mainNav');
+  if(nav) window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>40));
+
+  // ── DRAWER ──
+  const hamburger   = document.getElementById('hamburger');
+  const drawer      = document.getElementById('mobileDrawer');
+  const drawerClose = document.getElementById('drawerClose');
+  const overlay     = document.getElementById('drawerOverlay');
+  function openDrawer(){ if(!drawer) return; drawer.classList.add('open'); if(hamburger) hamburger.classList.add('open'); document.body.style.overflow='hidden'; }
+  function closeDrawer(){ if(!drawer) return; drawer.classList.remove('open'); if(hamburger) hamburger.classList.remove('open'); document.body.style.overflow=''; }
+  if(hamburger)   hamburger.addEventListener('click', openDrawer);
+  if(drawerClose) drawerClose.addEventListener('click', closeDrawer);
+  if(overlay)     overlay.addEventListener('click', closeDrawer);
+  document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeDrawer(); });
+  if(drawer) drawer.querySelectorAll('.drawer-nav a').forEach(a=>a.addEventListener('click',closeDrawer));
+
+  // ── PRODUCT FILTER ──
+  document.querySelectorAll('.filter-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      const cat=btn.dataset.category;
+      document.querySelectorAll('.product-card').forEach(card=>{
+        card.style.display=(cat==='all'||card.dataset.category===cat)?'':'none';
+      });
+    });
+  });
+
+  // ── SCROLL REVEAL ──
+  const revealIO = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); revealIO.unobserve(e.target); } });
+  },{threshold:.08, rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>revealIO.observe(el));
+})();
+</script>
+</body>
+</html>
